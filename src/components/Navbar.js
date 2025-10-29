@@ -58,16 +58,17 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
           <img
             width={100}
             src="https://logos-world.net/wp-content/uploads/2020/04/HM-Logo-1999-present.jpg"
+            alt="H&M Logo"
           />
         </Link>
       </div>
       <div class="nav-menu-area">
         <ul className="menu">
           {menuList.map((menu, index) => (
-            <li>
-              <a href="#" key={index}>
+            <li key={index}>
+              <button type="button" className="menu-button">
                 {menu}
-              </a>
+              </button>
             </li>
           ))}
         </ul>

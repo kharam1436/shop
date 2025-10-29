@@ -1,0 +1,55 @@
+.product-grid {
+  padding: 20px 0;
+}
+
+.product-grid .row {
+  margin: 0 -15px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.product-grid .col-lg-3,
+.product-grid .col-md-4,
+.product-grid .col-sm-6,
+.product-grid .col-xs-12 {
+  padding: 0 15px;
+  margin-bottom: 30px;
+  display: flex;
+}
+
+.product-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Ensure 4 cards per row on large screens */
+@media (min-width: 992px) {
+  .product-grid .col-lg-3 {
+    flex: 0 0 25%;
+    max-width: 25%;
+  }
+}
+
+/* 3 cards per row on medium screens */
+@media (min-width: 768px) and (max-width: 991px) {
+  .product-grid .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+}
+
+/* 2 cards per row on small screens */
+@media (min-width: 576px) and (max-width: 767px) {
+  .product-grid .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+/* 1 card per row on extra small screens */
+@media (max-width: 575px) {
+  .product-grid .col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
