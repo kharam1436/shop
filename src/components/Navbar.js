@@ -41,7 +41,12 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
           <FontAwesomeIcon icon={faBars} onClick={() => setWidth(250)} />
         </div>
         {authenticate ? (
-          <div onClick={() => setAuthenticate(false)}>
+          <div
+            onClick={() => {
+              setAuthenticate(false);
+              navigate("/");
+            }}
+          >
             <FontAwesomeIcon icon={faUser} />
             <span style={{ cursor: "pointer" }}>로그아웃</span>
           </div>
